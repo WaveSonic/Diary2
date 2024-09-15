@@ -3,7 +3,7 @@ from .forms import LoginForm, StudentRegistrationForm, TeacherRegistrationForm
 from django.contrib.auth.hashers import make_password
 from django.contrib.auth import authenticate, login as auth_login
 from .models import Student
-
+#TEST = Test
 def home(request):
     data = {
         'title': "Домашня сторінка"
