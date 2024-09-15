@@ -1,0 +1,18 @@
+{% extends 'login/layout.html' %}
+{% block title %} Реєстрація викладача в системі {% endblock %}
+{% block content %}
+    <div class="features">
+        <form method="post">
+            {% csrf_token %}
+            {{form.lastname}}<br>
+            {{form.name}}<br>
+            {{form.parent_name}}<br>
+            {{form.password}}<br>
+            {{form.subject}}<br>
+            <span>{{error}}</span>
+            <button class="btn btn-success" type="submit">Зареєструватися</button>
+        </form>
+    </div>
+{% endblock %}
+
+

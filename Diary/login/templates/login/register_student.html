@@ -1,0 +1,35 @@
+{% extends 'login/layout.html' %}
+{% block title %} Реєстрація студента в системі {% endblock %}
+{% block content %}
+    <div class="login-container">
+        <div class="login-box">
+            <h2>Реєстрація студента</h2>
+            <form method="post">
+                {% csrf_token %}
+                <div class="form-group">
+                    <label for="lastname">Прізвище:</label>
+                    {{form.lastname}}
+                </div>
+                <div class="form-group">
+                    <label for="name">Ім'я:</label>
+                    {{form.name}}
+                </div>
+                <div class="form-group">
+                    <label for="parent_name">По-батькові:</label>
+                    {{form.parent_name}}
+                </div>
+                <div class="form-group">
+                    <label for="gradebook_number">Номер залікової книжки:</label>
+                    {{form.gradebook_number}}
+                </div>
+                <div class="form-group">
+                    <label for="password">Пароль:</label>
+                    {{form.password}}
+                </div>
+                <button type="submit">Зареєструватися</button>
+            </form>
+        </div>
+    </div>
+{% endblock %}
+
+
